@@ -1,0 +1,47 @@
+---
+import About from "../components/About.astro"
+import Footer from "../components/Footer.astro"
+import Header from "../components/Header.astro"
+import BaseLayout from "../layouts/BaseLayout.astro"
+---
+
+<BaseLayout
+	title="Nosotros | SOLUCIA"
+	description="Conoce la visión integral de SOLUCIA S.A.S. para proyectos de arquitectura y construcción."
+>
+	<Header />
+
+	<main class="mx-auto max-w-7xl px-6 py-8">
+		<section class="grid gap-8 border-b border-gray-300/60 py-16 md:grid-cols-[0.8fr_1.2fr] md:items-end">
+			<div>
+				<p class="mb-3 text-xs font-bold uppercase tracking-wider text-[#c23b22]">SOLUCIA S.A.S.</p>
+				<h1 class="max-w-md text-3xl font-extrabold uppercase leading-tight text-slate-900 lg:text-4xl">
+					Diseñamos con visión, construimos con propósito
+				</h1>
+			</div>
+			<p class="max-w-2xl text-sm leading-relaxed text-slate-600">
+				Somos un equipo que integra arquitectura, ingeniería y gestión para
+				acompañar proyectos sólidos desde su primera idea hasta la entrega final.
+			</p>
+		</section>
+
+		<About />
+
+		<section class="grid gap-6 border-b border-gray-300/60 py-14 md:grid-cols-3">
+			<div class="border-l-2 border-[#c23b22] pl-4">
+				<h2 class="mb-2 text-sm font-bold uppercase text-slate-900">Integración</h2>
+				<p class="text-sm leading-relaxed text-slate-600">Unimos diseño, técnica y ejecución en una sola visión de proyecto.</p>
+			</div>
+			<div class="border-l-2 border-[#c23b22] pl-4">
+				<h2 class="mb-2 text-sm font-bold uppercase text-slate-900">Experiencia</h2>
+				<p class="text-sm leading-relaxed text-slate-600">Tomamos decisiones claras para convertir necesidades en espacios funcionales.</p>
+			</div>
+			<div class="border-l-2 border-[#c23b22] pl-4">
+				<h2 class="mb-2 text-sm font-bold uppercase text-slate-900">Compromiso</h2>
+				<p class="text-sm leading-relaxed text-slate-600">Trabajamos cerca de cada cliente, con transparencia en cada etapa.</p>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</BaseLayout>

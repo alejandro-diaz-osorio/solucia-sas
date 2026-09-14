@@ -1,0 +1,67 @@
+<header class="sticky top-0 z-50 border-b border-gray-100 bg-white shadow-sm">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <a
+            href="/"
+            data-scroll-target="inicio"
+            aria-label="SOLUCIA, volver al inicio"
+        >
+            <img
+                src="/logo.png"
+                alt="SOLUCIA S.A.S."
+                class="h-8"
+            />
+        </a>
+
+        <nav
+            class="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex"
+            aria-label="Navegación principal"
+        >
+            <a
+                href="/"
+                data-scroll-target="inicio"
+                class="text-red-600"
+                >Inicio</a
+            >
+            <a
+                href="/nosotros/"
+                class="transition-colors hover:text-red-600"
+                >Nosotros</a
+            >
+            <a
+                href="/servicios/"
+                class="transition-colors hover:text-red-600"
+                >Servicios</a
+            >
+            <a
+                href="/cotizar/"
+                class="transition-colors hover:text-red-600"
+                >Contacto</a
+            >
+        </nav>
+
+        <a
+            href="/cotizar/"
+            class="rounded-sm bg-[#c23b22] px-5 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-red-700"
+        >
+            COTIZAR PROYECTO
+        </a>
+    </div>
+</header>
+
+<script>
+    document
+        .querySelectorAll<HTMLElement>("[data-scroll-target]")
+        .forEach((link) => {
+            link.addEventListener("click", (event) => {
+                const targetId = link.dataset.scrollTarget
+                const target = targetId
+                    ? document.getElementById(targetId)
+                    : null
+
+                if (!target) return
+
+                event.preventDefault()
+                target.scrollIntoView({ behavior: "smooth", block: "start" })
+            })
+        })
+</script>

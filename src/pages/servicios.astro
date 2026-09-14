@@ -1,0 +1,32 @@
+---
+import Footer from "../components/Footer.astro"
+import Header from "../components/Header.astro"
+import Services from "../components/Services.astro"
+import BaseLayout from "../layouts/BaseLayout.astro"
+---
+
+<BaseLayout
+	title="Servicios | SOLUCIA"
+	description="Servicios integrales de diseño, ingeniería, construcción y gestión de proyectos."
+>
+	<Header />
+
+	<main class="mx-auto max-w-7xl px-6 py-8">
+		<section class="grid gap-8 border-b border-gray-300/60 py-16 md:grid-cols-[0.8fr_1.2fr] md:items-end">
+			<div>
+				<p class="mb-3 text-xs font-bold uppercase tracking-wider text-[#c23b22]">Lo que hacemos</p>
+				<h1 class="max-w-md text-3xl font-extrabold uppercase leading-tight text-slate-900 lg:text-4xl">
+					Soluciones para cada etapa del proyecto
+				</h1>
+			</div>
+			<p class="max-w-2xl text-sm leading-relaxed text-slate-600">
+				Ponemos a tu disposición un equipo multidisciplinario para pasar de la
+				planeación a la ejecución con claridad, coordinación y respaldo técnico.
+			</p>
+		</section>
+
+		<Services />
+	</main>
+
+	<Footer />
+</BaseLayout>
